@@ -1,0 +1,6 @@
+C:\Mobile\Mobile\Mobile\bin\Debug\Mobile.exe.config
+C:\Mobile\Mobile\Mobile\bin\Debug\Mobile.exe
+C:\Mobile\Mobile\Mobile\bin\Debug\Mobile.pdb
+C:\Mobile\Mobile\Mobile\obj\Debug\Mobile.csprojAssemblyReference.cache
+C:\Mobile\Mobile\Mobile\obj\Debug\Mobile.exe
+C:\Mobile\Mobile\Mobile\obj\Debug\Mobile.pdb

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{18312240-7310-4134-87B5-872EF322E858}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Mobile</RootNamespace>
+    <AssemblyName>Mobile</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonObjects\Camera\FrontCamera.cs" />
+    <Compile Include="CommonObjects\Camera\MainCamera.cs" />
+    <Compile Include="CommonObjects\Memory\BuildInMemory.cs" />
+    <Compile Include="CommonObjects\Memory\RAM.cs" />
+    <Compile Include="CommonObjects\Screen\BasicTouch.cs" />
+    <Compile Include="CommonObjects\Battery.cs" />
+    <Compile Include="MobilePhone\SimCorpMobile.cs" />
+    <Compile Include="CommonObjects\ScreenMobile\ColorfulScreen.cs" />
+    <Compile Include="CommonObjects\Camera\CameraBase.cs" />
+    <Compile Include="CommonObjects\Condition.cs" />
+    <Compile Include="CommonObjects\Dynamic.cs" />
+    <Compile Include="CommonObjects\Manufacturer.cs" />
+    <Compile Include="CommonObjects\Memory\MemoryBase.cs" />
+    <Compile Include="CommonObjects\MemoryCard.cs" />
+    <Compile Include="CommonObjects\MobileType.cs" />
+    <Compile Include="CommonObjects\OperatingSystem.cs" />
+    <Compile Include="CommonObjects\Screen\MultiTouch.cs" />
+    <Compile Include="CommonObjects\Screen\SingleTouch.cs" />
+    <Compile Include="CommonObjects\ScreenMobile\IScreenImage.cs" />
+    <Compile Include="CommonObjects\Keyboard.cs" />
+    <Compile Include="CommonObjects\Microphone.cs" />
+    <Compile Include="MobilePhone\MobileEntity.cs" />
+    <Compile Include="CommonObjects\ScreenMobile\MonochromeScreen.cs" />
+    <Compile Include="CommonObjects\ScreenMobile\OLEDScreen.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CommonObjects\ScreenMobile\RetinaScreen.cs" />
+    <Compile Include="CommonObjects\Screen\Screen.cs" />
+    <Compile Include="CommonObjects\ScreenMobile\ScreenBase.cs" />
+    <Compile Include="CommonObjects\Sim-card.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
