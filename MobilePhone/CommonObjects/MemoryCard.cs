@@ -9,10 +9,6 @@ namespace Mobile.CommonObjects
     public class MemoryCard
     {
         public int Size { get; set; } //2, 16, 32, 64, 128 Gb
-        public MemoryCard()
-        {
-
-        }
         public MemoryCard(int size)
         {
             Size = size;

@@ -11,7 +11,7 @@ namespace Mobile
         static void Main(string[] args)
         {
             SimCorpMobile mobilePhone = new SimCorpMobile();
-            Console.WriteLine(mobilePhone.GetDescription());
+            Console.WriteLine(mobilePhone);
             Console.ReadKey();
         }
     }

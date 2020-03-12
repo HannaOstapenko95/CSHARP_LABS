@@ -8,7 +8,10 @@ namespace Mobile
 {
     public interface IScreenImage
     {
-          string Image_size { get; set; } //1280X920
+          string Image_size { get;  } //1280X920
           string Drawing { get; set; }
+         int Dpi { get; }
+         int NumberOfColors { get;  }
+         string TechnologyOfManufacturing { get;}
     }
 }

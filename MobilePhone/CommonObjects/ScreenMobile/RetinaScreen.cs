@@ -16,11 +16,15 @@ namespace Mobile
             return new RetinaScreen();
 
         }
-        public override object Show(IScreenImage screenImage, int brightness, string image_size, string drawing)
+        public override object Show(IScreenImage screenImage, int brightness, string image_size, string drawing, int dpi, int numberOfColors,
+            string technologyOfManufacturing)
         {
             // here logic that draws colorful image can be added
             Console.WriteLine("Size of Retina Screen = " + screenImage.Image_size);
             Console.WriteLine("Drawing of Retina Screen = " + screenImage.Drawing);
+            Console.WriteLine("DPI of Retina Screen = " + dpi);
+            Console.WriteLine("Number of Colors for Retina Screen = " + numberOfColors);
+            Console.WriteLine("Technology of Manufacturing for Retina Screen = " + technologyOfManufacturing);
             Console.WriteLine("Brightness of Retina Screen = " + brightness);
             return new RetinaScreen();
         }

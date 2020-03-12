@@ -45,20 +45,13 @@
   <ItemGroup>
     <Compile Include="CommonObjects\Camera\FrontCamera.cs" />
     <Compile Include="CommonObjects\Camera\MainCamera.cs" />
-    <Compile Include="CommonObjects\Memory\BuildInMemory.cs" />
-    <Compile Include="CommonObjects\Memory\RAM.cs" />
     <Compile Include="CommonObjects\Screen\BasicTouch.cs" />
     <Compile Include="CommonObjects\Battery.cs" />
     <Compile Include="MobilePhone\SimCorpMobile.cs" />
     <Compile Include="CommonObjects\ScreenMobile\ColorfulScreen.cs" />
     <Compile Include="CommonObjects\Camera\CameraBase.cs" />
-    <Compile Include="CommonObjects\Condition.cs" />
-    <Compile Include="CommonObjects\Dynamic.cs" />
-    <Compile Include="CommonObjects\Manufacturer.cs" />
-    <Compile Include="CommonObjects\Memory\MemoryBase.cs" />
+    <Compile Include="CommonObjects\Speaker.cs" />
     <Compile Include="CommonObjects\MemoryCard.cs" />
-    <Compile Include="CommonObjects\MobileType.cs" />
-    <Compile Include="CommonObjects\OperatingSystem.cs" />
     <Compile Include="CommonObjects\Screen\MultiTouch.cs" />
     <Compile Include="CommonObjects\Screen\SingleTouch.cs" />
     <Compile Include="CommonObjects\ScreenMobile\IScreenImage.cs" />

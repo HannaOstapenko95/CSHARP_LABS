@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mobile
 {
-    public class OLEDScreen : ColorfulScreen
+    public class OLEDScreen : ScreenBase
     {
         public OLEDScreen()
         {
@@ -27,11 +27,15 @@ namespace Mobile
             Console.WriteLine("Drawing of OLED Screen = " + screenImage.Drawing);
             return new OLEDScreen();
         }
-        public override object Show(IScreenImage screenImage, int brightness, string image_size, string drawing)
+        public override object Show(IScreenImage screenImage, int brightness, string image_size, string drawing, int dpi, int numberOfColors,
+            string technologyOfManufacturing)
         {
             // here logic that draws colorful image can be added
             Console.WriteLine("Size of OLED Screen = " + image_size);
             Console.WriteLine("Drawing of OLED Screen = " + drawing);
+            Console.WriteLine("DPI of Colorful Screen = " + dpi);
+            Console.WriteLine("Number of Colors for Colorful Screen = " + numberOfColors);
+            Console.WriteLine("Technology of Manufacturing for Colorful Screen = " + technologyOfManufacturing);
             Console.WriteLine("Brightness of OLED Screen = " + brightness);
             OLEDScreen vOLEDScreen = new OLEDScreen();
             return vOLEDScreen;

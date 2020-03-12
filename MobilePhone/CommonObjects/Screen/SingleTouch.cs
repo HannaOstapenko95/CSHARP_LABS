@@ -9,7 +9,7 @@ namespace Mobile.CommonObjects.Screen
     public class SingleTouch : BasicTouch
     {
         //Handle single touch input from user
-        public SingleTouch(string resolution, double diagonal, TypeOfScreens typeOfScreen) : base(resolution, diagonal, typeOfScreen)
+        public SingleTouch(string resolution, double diagonal, int numberOfTouchesSimultaneously, TypeOfScreens typeOfScreen) : base(resolution, diagonal, numberOfTouchesSimultaneously, typeOfScreen)
         {
         }
         public override string ToString()

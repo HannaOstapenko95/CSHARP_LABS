@@ -9,7 +9,7 @@ namespace Mobile.CommonObjects.Screen
     public class BasicTouch : Screen
     {
         //Basic touch functionality
-        public BasicTouch(string resolution, double diagonal, TypeOfScreens typeOfScreen) : base(resolution, diagonal, typeOfScreen)
+        public BasicTouch(string resolution, double diagonal, int numberOfTouchesSimultaneously, TypeOfScreens typeOfScreen) : base(resolution, diagonal, numberOfTouchesSimultaneously, typeOfScreen)
         {
         }
 

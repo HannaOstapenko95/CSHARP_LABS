@@ -8,12 +8,8 @@ namespace Mobile
 {
     public class Battery
     {
-        public int Size { get; set; } 
-        public int Volume { get; set; } //мАч
-        public Battery()
-        {
-
-        }
+        public int Size { get; }
+        public int Volume { get;  } //мАч
         public Battery(int size, int volume)
         {
             this.Size = size;
@@ -21,7 +17,7 @@ namespace Mobile
         }
         public override string ToString()
         {
-            return "Battery -> "+"Size: " + Size + "  Volume: " + Volume + "mAh";
+            return "Battery -> " + "Size: " + Size + "  Volume: " + Volume + "mAh";
         }
     }
 }

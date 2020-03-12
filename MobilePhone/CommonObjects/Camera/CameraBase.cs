@@ -8,12 +8,8 @@ namespace Mobile.CommonObjects.Camera
 {
     public class CameraBase
     {
-        public int NumberOfCameras { get; set; }//1-2
-        public int Pixel { get; set; } //Number of pixels
-        public CameraBase()
-        {
-
-        }
+        public int NumberOfCameras { get;}//1-2
+        public int Pixel { get; } //Number of pixels
         public CameraBase(int numberOfCameras, int pixel)
         {
             NumberOfCameras = numberOfCameras;

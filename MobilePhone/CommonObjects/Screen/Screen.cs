@@ -8,18 +8,20 @@ namespace Mobile.CommonObjects.Screen
 {
     public class Screen
     {
-        public string Resolution { get; set; } //Full HD (1920X1080), HD (1280X720)..
-        public double Diagonal { get; set; } //4, 5, 5.5, 6...
-        public TypeOfScreens TypeOfScreen { get; set; } //IPS, Super Amoled, NFC
+        public string Resolution { get;} //Full HD (1920X1080), HD (1280X720)..
+        public double Diagonal { get; } //4, 5, 5.5, 6...
+        public int NumberOfTouchesSimultaneously { get; }
+        public TypeOfScreens TypeOfScreen { get; } //IPS, Super Amoled
         public Screen()
         {
 
         }
-        public Screen(string resolution, double diagonal, TypeOfScreens typeOfScreen)
+        public Screen(string resolution, double diagonal, int numberOfTouchesSimultaneously, TypeOfScreens typeOfScreen)
         {
             Resolution = resolution;
             Diagonal = diagonal;
             TypeOfScreen = typeOfScreen;
+            NumberOfTouchesSimultaneously = numberOfTouchesSimultaneously;
         }
         public override string ToString()
         {
