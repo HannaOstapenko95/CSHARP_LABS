@@ -1,0 +1,10 @@
+C:\MobilePhone\MobileConsoleApp\bin\Debug\MobileConsoleApp.exe.config
+C:\MobilePhone\MobileConsoleApp\bin\Debug\MobileConsoleApp.exe
+C:\MobilePhone\MobileConsoleApp\bin\Debug\MobileConsoleApp.pdb
+C:\MobilePhone\MobileConsoleApp\bin\Debug\Mobile.dll
+C:\MobilePhone\MobileConsoleApp\bin\Debug\Mobile.pdb
+C:\MobilePhone\MobileConsoleApp\bin\Debug\Mobile.dll.config
+C:\MobilePhone\MobileConsoleApp\obj\Debug\MobileConsoleApp.csprojAssemblyReference.cache
+C:\MobilePhone\MobileConsoleApp\obj\Debug\MobileConsoleApp.csproj.CopyComplete
+C:\MobilePhone\MobileConsoleApp\obj\Debug\MobileConsoleApp.exe
+C:\MobilePhone\MobileConsoleApp\obj\Debug\MobileConsoleApp.pdb

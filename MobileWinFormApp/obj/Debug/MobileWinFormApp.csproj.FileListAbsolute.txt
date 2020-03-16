@@ -1,0 +1,13 @@
+C:\MobilePhone\MobileWinFormApp\bin\Debug\MobileWinFormApp.exe.config
+C:\MobilePhone\MobileWinFormApp\bin\Debug\MobileWinFormApp.exe
+C:\MobilePhone\MobileWinFormApp\bin\Debug\MobileWinFormApp.pdb
+C:\MobilePhone\MobileWinFormApp\obj\Debug\MobileWinFormApp.csprojAssemblyReference.cache
+C:\MobilePhone\MobileWinFormApp\obj\Debug\MobileWinFormApp.Form1.resources
+C:\MobilePhone\MobileWinFormApp\obj\Debug\MobileWinFormApp.Properties.Resources.resources
+C:\MobilePhone\MobileWinFormApp\obj\Debug\MobileWinFormApp.csproj.GenerateResource.cache
+C:\MobilePhone\MobileWinFormApp\obj\Debug\MobileWinFormApp.exe
+C:\MobilePhone\MobileWinFormApp\obj\Debug\MobileWinFormApp.pdb
+C:\MobilePhone\MobileWinFormApp\bin\Debug\Mobile.dll
+C:\MobilePhone\MobileWinFormApp\bin\Debug\Mobile.pdb
+C:\MobilePhone\MobileWinFormApp\bin\Debug\Mobile.dll.config
+C:\MobilePhone\MobileWinFormApp\obj\Debug\MobileWinFormApp.csproj.CopyComplete

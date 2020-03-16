@@ -4,9 +4,9 @@ C:\Mobile\Mobile\Mobile\bin\Debug\Mobile.pdb
 C:\Mobile\Mobile\Mobile\obj\Debug\Mobile.csprojAssemblyReference.cache
 C:\Mobile\Mobile\Mobile\obj\Debug\Mobile.exe
 C:\Mobile\Mobile\Mobile\obj\Debug\Mobile.pdb
-C:\MobilePhone\MobilePhone\bin\Debug\Mobile.exe.config
-C:\MobilePhone\MobilePhone\bin\Debug\Mobile.exe
 C:\MobilePhone\MobilePhone\bin\Debug\Mobile.pdb
 C:\MobilePhone\MobilePhone\obj\Debug\Mobile.csprojAssemblyReference.cache
-C:\MobilePhone\MobilePhone\obj\Debug\Mobile.exe
 C:\MobilePhone\MobilePhone\obj\Debug\Mobile.pdb
+C:\MobilePhone\MobilePhone\bin\Debug\Mobile.dll.config
+C:\MobilePhone\MobilePhone\bin\Debug\Mobile.dll
+C:\MobilePhone\MobilePhone\obj\Debug\Mobile.dll

@@ -1,4 +1,5 @@
-﻿using Mobile.CommonObjects;
+﻿using Mobile.Case;
+using Mobile.CommonObjects;
 using Mobile.CommonObjects.Camera;
 using Mobile.CommonObjects.Screen;
 using System;
@@ -6,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Mobile
 {
@@ -53,12 +55,68 @@ namespace Mobile
 
     public abstract class MobileEntity
     {
+        public abstract IPlayback iplayb { get; set; }
+        public abstract IOutput ioutput { get; set; }
+        public abstract ICharger icharger { get; set; }
+        public abstract ICase icase { get; set; }
+        public abstract IScreenTouch iscreentouch { get; set; }
+        public virtual void Play(object data = null, StringBuilder textboxBuilder = null, RichTextBox textBox = null)
+        {
+            if (data == null || textboxBuilder == null || textBox == null)
+            {
+                iplayb.Play(data);
+            }
+            else
+            {
+                iplayb.Play(data, textboxBuilder, textBox);
+            }
+        }
+        public virtual void WriteOn(string text = null, RichTextBox textBox = null, StringBuilder textboxBuilder = null)
+        {
+            if (textBox == null || textboxBuilder == null)
+            {
+                ioutput.WriteOn(text);
+            }
+            else
+            {
+                ioutput.WriteOn(text, textBox,  textboxBuilder);
+            }      
+        }
+        public virtual void Charge(object data = null, StringBuilder textboxBuilder = null, RichTextBox textBox = null)
+        {
+            if ( data == null ||  textboxBuilder == null ||  textBox == null) {
+                icharger.Charge(); 
+            }
+            else icharger.Charge(data, textboxBuilder, textBox);
+        }
+        public virtual void SelectCase(object data = null, StringBuilder textboxBuilder = null, RichTextBox textBox = null)
+        {
+            if (data == null || textboxBuilder == null || textBox == null)
+            {
+                icase.SelectCase();
+            }
+            else
+            {
+                icase.SelectCase(data, textboxBuilder, textBox);
+            }
+        }
+        public virtual void SelectScreenTouch(object data = null, StringBuilder textboxBuilder = null, RichTextBox textBox = null)
+        {
+            if(data == null || textboxBuilder == null || textBox == null)
+            {
+                iscreentouch.SelectScreenTouch();
+            }
+            else
+            {
+                iscreentouch.SelectScreenTouch(data, textboxBuilder, textBox);
+            }
+        }
         public abstract MobileTypeConcrete MobileTypes { get; set; }
         public abstract OperatingSystems OperatingSystemType { get; set; }
         public abstract ScreenBase Screen { get; }
         public abstract string MemoryType { get; set; }
         public abstract int SizeOfMemory { get; set; }
-        public abstract Screen ScreenTouch { get; set; }
+        public abstract Screenn ScreenTouch { get; set; }
         public abstract CameraBase Camera { get; }
         public abstract Battery Battery { get; set; }
         public abstract TypeOfConditions TypeOfConditions { get; set; } //new or used
@@ -82,7 +140,7 @@ namespace Mobile
             Screen.Show(screenImage, brightness, image_size, drawing,  dpi,  numberOfColors,
              technologyOfManufacturing);
         }
-        //public string GetDescription()
+      
         public override string ToString()
         {
         var descriptionBuilder = new StringBuilder();
@@ -111,5 +169,8 @@ namespace Mobile
             descriptionBuilder.AppendLine($"{Dynamic.ToString()}");  
             return descriptionBuilder.ToString();
         }
+
+        
+        
     }
 }

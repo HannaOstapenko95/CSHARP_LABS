@@ -1,4 +1,5 @@
-﻿using Mobile.CommonObjects;
+﻿using Mobile.Case;
+using Mobile.CommonObjects;
 using Mobile.CommonObjects.Camera;
 using Mobile.CommonObjects.Screen;
 using System;
@@ -12,6 +13,12 @@ namespace Mobile
 {
     public class SimCorpMobile : MobileEntity
     {
+        public override IPlayback iplayb { get; set; }
+        public override IOutput ioutput { get; set; }
+        public override ICharger icharger { get; set; }
+        public override ICase icase { get; set; }
+        public override IScreenTouch iscreentouch { get; set; }
+
         public override MobileTypeConcrete MobileTypes { get { return vMobileTypes; } set { value = vMobileTypes; } }
 
         private MobileTypeConcrete vMobileTypes = MobileTypeConcrete.Smartphone;
@@ -22,7 +29,7 @@ namespace Mobile
 
         public override ScreenBase Screen { get { return vOLEDScreen; } }
 
-        public override Screen ScreenTouch { get { return vMultiTouch; } set { value = vMultiTouch; } }
+        public override Screenn ScreenTouch { get { return vMultiTouch; } set { value = vMultiTouch; } }
 
         private readonly MultiTouch vMultiTouch = new MultiTouch("456", 56.34, 2, TypeOfScreens.IPS);
 
@@ -62,5 +69,37 @@ namespace Mobile
         public override Sim_card Sim_card { get { return vSim_card; } set { value = vSim_card; } }
 
         private readonly Sim_card vSim_card = new Sim_card("Life", "Nano Sim");
+
+        //public override void SelectComponent(string i)
+        //{
+           
+            
+        //    //string i = Convert.ToString(Console.ReadLine());
+
+        //    iPhoneHeadset iphone = new iPhoneHeadset();
+        //    SamsungHeadset samsphone = new SamsungHeadset();
+        //    ConsoleOutput output = new ConsoleOutput();
+
+
+        //    switch (i)
+        //    {
+        //        case "1":
+        //            Console.WriteLine("IPhoneHeadset selected");
+        //            Console.WriteLine("Play sound in mobile");
+        //            iphone.Play(iphone);
+
+        //            iPhoneHeadset iphone2 = new iPhoneHeadset(output);
+        //            iphone2.Play(iphone2);
+        //            output.Write("iPhoneHeadset choosed");
+        //            break;
+        //        case "2":
+        //            Console.WriteLine("SamsungHeadset selected");
+        //            Console.WriteLine("Play sound in mobile");
+        //            samsphone.Play(samsphone);
+        //            output.Write("SamsungHeadset choosed");
+        //            break;
+        //    }
+
+        }
     }
-}
+

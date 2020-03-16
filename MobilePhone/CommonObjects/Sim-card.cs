@@ -8,7 +8,6 @@ namespace Mobile
 {
     public class Sim_card
     {
-        //public int NumberOfSimCards { get; set; } //1-3
         public string OperatorPhone { get; set; } //Life, Vodafone, Kyivstar
         public string FormFactor { get; set; } //Micro, Nano, Standart
         public Sim_card(string operatorPhone, string formFactor)

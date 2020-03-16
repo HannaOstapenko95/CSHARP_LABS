@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{18312240-7310-4134-87B5-872EF322E858}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>Mobile</RootNamespace>
     <AssemblyName>Mobile</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -32,9 +32,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,10 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Case\SlimCase.cs" />
+    <Compile Include="Case\FolioCase .cs" />
+    <Compile Include="Case\WalletCase.cs" />
+    <Compile Include="Case\ToughCase.cs" />
+    <Compile Include="Case\BookCase.cs" />
+    <Compile Include="Case\ICase.cs" />
+    <Compile Include="Charger\Charger.cs" />
+    <Compile Include="Charger\PowerBank.cs" />
     <Compile Include="CommonObjects\Camera\FrontCamera.cs" />
     <Compile Include="CommonObjects\Camera\MainCamera.cs" />
     <Compile Include="CommonObjects\Screen\BasicTouch.cs" />
     <Compile Include="CommonObjects\Battery.cs" />
+    <Compile Include="Charger\ICharger.cs" />
+    <Compile Include="CommonObjects\Screen\IScreenTouch.cs" />
+    <Compile Include="Output\OutPut.cs" />
+    <Compile Include="Output\IOutput.cs" />
+    <Compile Include="Playback\iPhoneHeadset.cs" />
+    <Compile Include="Playback\IPlayback.cs" />
     <Compile Include="MobilePhone\SimCorpMobile.cs" />
     <Compile Include="CommonObjects\ScreenMobile\ColorfulScreen.cs" />
     <Compile Include="CommonObjects\Camera\CameraBase.cs" />
@@ -60,12 +78,14 @@
     <Compile Include="MobilePhone\MobileEntity.cs" />
     <Compile Include="CommonObjects\ScreenMobile\MonochromeScreen.cs" />
     <Compile Include="CommonObjects\ScreenMobile\OLEDScreen.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Playback\PhoneSpeaker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CommonObjects\ScreenMobile\RetinaScreen.cs" />
     <Compile Include="CommonObjects\Screen\Screen.cs" />
     <Compile Include="CommonObjects\ScreenMobile\ScreenBase.cs" />
     <Compile Include="CommonObjects\Sim-card.cs" />
+    <Compile Include="Playback\SamsungHeadset.cs" />
+    <Compile Include="Playback\UnofficialPhoneHeadset.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
