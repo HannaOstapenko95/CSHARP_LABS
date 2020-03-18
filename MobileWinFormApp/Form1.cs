@@ -23,7 +23,7 @@ namespace MobileWinFormApp
 
         private void IphoneHeadset_CheckedChanged(object sender, EventArgs e)
         {
-
+            btnApply.Enabled = true;
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -39,6 +39,7 @@ namespace MobileWinFormApp
            mobilePhone.ioutput = tex;
             if (rdbIphoneHeadset.Checked)
             {
+                
                 mobilePhone.iplayb = new iPhoneHeadset(tex);
                 mobilePhone.WriteOn("IPhoneHeadset playback selected\nSet playback to Mobile...\nPlay sound in mobile:", 
                     richTextBox1,  textboxBuilder);
@@ -131,6 +132,74 @@ namespace MobileWinFormApp
         private void btnClear_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if (rdbBookCase.Checked)
+            {
+                
+            }
+        }
+
+        private void rdbSamsungHeadset_CheckedChanged(object sender, EventArgs e)
+        {
+            btnApply.Enabled = true;
+        }
+
+        private void rdbPhoneSpeaker_CheckedChanged(object sender, EventArgs e)
+        {
+            btnApply.Enabled = true;
+        }
+
+        private void rdbUnofficialPhoneHeadset_CheckedChanged(object sender, EventArgs e)
+        {
+            btnApply.Enabled = true;
+        }
+
+        private void rdbBookCase_CheckedChanged(object sender, EventArgs e)
+        {
+            btnApply.Enabled = true;
+        }
+
+        private void rdbToughCase_CheckedChanged(object sender, EventArgs e)
+        {
+            btnApply.Enabled = true;
+        }
+
+        private void rdbSlimCase_CheckedChanged(object sender, EventArgs e)
+        {
+            btnApply.Enabled = true;
+        }
+
+        private void rdbFolioCase_CheckedChanged(object sender, EventArgs e)
+        {
+            btnApply.Enabled = true;
+        }
+
+        private void rdbWalletCase_CheckedChanged(object sender, EventArgs e)
+        {
+            btnApply.Enabled = true;
+        }
+
+        private void rdbPowerBank_CheckedChanged(object sender, EventArgs e)
+        {
+            btnApply.Enabled = true;
+        }
+
+        private void rdbCharger_CheckedChanged(object sender, EventArgs e)
+        {
+            btnApply.Enabled = true;
+        }
+
+        private void rdbMultiTouch_CheckedChanged(object sender, EventArgs e)
+        {
+            btnApply.Enabled = true;
+        }
+
+        private void rdbSingleTouch_CheckedChanged(object sender, EventArgs e)
+        {
+            btnApply.Enabled = true;
         }
     }
 }

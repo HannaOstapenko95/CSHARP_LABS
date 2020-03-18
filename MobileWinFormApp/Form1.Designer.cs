@@ -39,11 +39,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.rdbBookCase = new System.Windows.Forms.RadioButton();
-            this.rdbToughCase = new System.Windows.Forms.RadioButton();
-            this.rdbSlimCase = new System.Windows.Forms.RadioButton();
-            this.rdbFolioCase = new System.Windows.Forms.RadioButton();
             this.rdbWalletCase = new System.Windows.Forms.RadioButton();
+            this.rdbFolioCase = new System.Windows.Forms.RadioButton();
+            this.rdbSlimCase = new System.Windows.Forms.RadioButton();
+            this.rdbToughCase = new System.Windows.Forms.RadioButton();
+            this.rdbBookCase = new System.Windows.Forms.RadioButton();
             this.btnClear = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.rdbSingleTouch = new System.Windows.Forms.RadioButton();
@@ -78,9 +78,11 @@
             this.rdbSamsungHeadset.TabStop = true;
             this.rdbSamsungHeadset.Text = "SamsungHeadset";
             this.rdbSamsungHeadset.UseVisualStyleBackColor = true;
+            this.rdbSamsungHeadset.CheckedChanged += new System.EventHandler(this.rdbSamsungHeadset_CheckedChanged);
             // 
             // btnApply
             // 
+            this.btnApply.Enabled = false;
             this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnApply.Location = new System.Drawing.Point(12, 465);
             this.btnApply.Name = "btnApply";
@@ -111,6 +113,7 @@
             this.rdbPhoneSpeaker.TabStop = true;
             this.rdbPhoneSpeaker.Text = "PhoneSpeaker";
             this.rdbPhoneSpeaker.UseVisualStyleBackColor = true;
+            this.rdbPhoneSpeaker.CheckedChanged += new System.EventHandler(this.rdbPhoneSpeaker_CheckedChanged);
             // 
             // rdbUnofficialPhoneHeadset
             // 
@@ -123,6 +126,7 @@
             this.rdbUnofficialPhoneHeadset.TabStop = true;
             this.rdbUnofficialPhoneHeadset.Text = "UnofficialPhoneHeadset";
             this.rdbUnofficialPhoneHeadset.UseVisualStyleBackColor = true;
+            this.rdbUnofficialPhoneHeadset.CheckedChanged += new System.EventHandler(this.rdbUnofficialPhoneHeadset_CheckedChanged);
             // 
             // rdbPowerBank
             // 
@@ -135,6 +139,7 @@
             this.rdbPowerBank.TabStop = true;
             this.rdbPowerBank.Text = "PowerBank";
             this.rdbPowerBank.UseVisualStyleBackColor = true;
+            this.rdbPowerBank.CheckedChanged += new System.EventHandler(this.rdbPowerBank_CheckedChanged);
             // 
             // rdbCharger
             // 
@@ -147,6 +152,7 @@
             this.rdbCharger.TabStop = true;
             this.rdbCharger.Text = "Charger";
             this.rdbCharger.UseVisualStyleBackColor = true;
+            this.rdbCharger.CheckedChanged += new System.EventHandler(this.rdbCharger_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -189,41 +195,18 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Choose Case type:";
             // 
-            // rdbBookCase
+            // rdbWalletCase
             // 
-            this.rdbBookCase.AutoSize = true;
-            this.rdbBookCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rdbBookCase.Location = new System.Drawing.Point(7, 47);
-            this.rdbBookCase.Name = "rdbBookCase";
-            this.rdbBookCase.Size = new System.Drawing.Size(151, 33);
-            this.rdbBookCase.TabIndex = 10;
-            this.rdbBookCase.TabStop = true;
-            this.rdbBookCase.Text = "BookCase";
-            this.rdbBookCase.UseVisualStyleBackColor = true;
-            // 
-            // rdbToughCase
-            // 
-            this.rdbToughCase.AutoSize = true;
-            this.rdbToughCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rdbToughCase.Location = new System.Drawing.Point(6, 86);
-            this.rdbToughCase.Name = "rdbToughCase";
-            this.rdbToughCase.Size = new System.Drawing.Size(166, 33);
-            this.rdbToughCase.TabIndex = 11;
-            this.rdbToughCase.TabStop = true;
-            this.rdbToughCase.Text = "ToughCase";
-            this.rdbToughCase.UseVisualStyleBackColor = true;
-            // 
-            // rdbSlimCase
-            // 
-            this.rdbSlimCase.AutoSize = true;
-            this.rdbSlimCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rdbSlimCase.Location = new System.Drawing.Point(7, 125);
-            this.rdbSlimCase.Name = "rdbSlimCase";
-            this.rdbSlimCase.Size = new System.Drawing.Size(143, 33);
-            this.rdbSlimCase.TabIndex = 12;
-            this.rdbSlimCase.TabStop = true;
-            this.rdbSlimCase.Text = "SlimCase";
-            this.rdbSlimCase.UseVisualStyleBackColor = true;
+            this.rdbWalletCase.AutoSize = true;
+            this.rdbWalletCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rdbWalletCase.Location = new System.Drawing.Point(6, 203);
+            this.rdbWalletCase.Name = "rdbWalletCase";
+            this.rdbWalletCase.Size = new System.Drawing.Size(164, 33);
+            this.rdbWalletCase.TabIndex = 14;
+            this.rdbWalletCase.TabStop = true;
+            this.rdbWalletCase.Text = "WalletCase";
+            this.rdbWalletCase.UseVisualStyleBackColor = true;
+            this.rdbWalletCase.CheckedChanged += new System.EventHandler(this.rdbWalletCase_CheckedChanged);
             // 
             // rdbFolioCase
             // 
@@ -236,18 +219,46 @@
             this.rdbFolioCase.TabStop = true;
             this.rdbFolioCase.Text = "FolioCase";
             this.rdbFolioCase.UseVisualStyleBackColor = true;
+            this.rdbFolioCase.CheckedChanged += new System.EventHandler(this.rdbFolioCase_CheckedChanged);
             // 
-            // rdbWalletCase
+            // rdbSlimCase
             // 
-            this.rdbWalletCase.AutoSize = true;
-            this.rdbWalletCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rdbWalletCase.Location = new System.Drawing.Point(6, 203);
-            this.rdbWalletCase.Name = "rdbWalletCase";
-            this.rdbWalletCase.Size = new System.Drawing.Size(164, 33);
-            this.rdbWalletCase.TabIndex = 14;
-            this.rdbWalletCase.TabStop = true;
-            this.rdbWalletCase.Text = "WalletCase";
-            this.rdbWalletCase.UseVisualStyleBackColor = true;
+            this.rdbSlimCase.AutoSize = true;
+            this.rdbSlimCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rdbSlimCase.Location = new System.Drawing.Point(7, 125);
+            this.rdbSlimCase.Name = "rdbSlimCase";
+            this.rdbSlimCase.Size = new System.Drawing.Size(143, 33);
+            this.rdbSlimCase.TabIndex = 12;
+            this.rdbSlimCase.TabStop = true;
+            this.rdbSlimCase.Text = "SlimCase";
+            this.rdbSlimCase.UseVisualStyleBackColor = true;
+            this.rdbSlimCase.CheckedChanged += new System.EventHandler(this.rdbSlimCase_CheckedChanged);
+            // 
+            // rdbToughCase
+            // 
+            this.rdbToughCase.AutoSize = true;
+            this.rdbToughCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rdbToughCase.Location = new System.Drawing.Point(6, 86);
+            this.rdbToughCase.Name = "rdbToughCase";
+            this.rdbToughCase.Size = new System.Drawing.Size(166, 33);
+            this.rdbToughCase.TabIndex = 11;
+            this.rdbToughCase.TabStop = true;
+            this.rdbToughCase.Text = "ToughCase";
+            this.rdbToughCase.UseVisualStyleBackColor = true;
+            this.rdbToughCase.CheckedChanged += new System.EventHandler(this.rdbToughCase_CheckedChanged);
+            // 
+            // rdbBookCase
+            // 
+            this.rdbBookCase.AutoSize = true;
+            this.rdbBookCase.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rdbBookCase.Location = new System.Drawing.Point(7, 47);
+            this.rdbBookCase.Name = "rdbBookCase";
+            this.rdbBookCase.Size = new System.Drawing.Size(151, 33);
+            this.rdbBookCase.TabIndex = 10;
+            this.rdbBookCase.TabStop = true;
+            this.rdbBookCase.Text = "BookCase";
+            this.rdbBookCase.UseVisualStyleBackColor = true;
+            this.rdbBookCase.CheckedChanged += new System.EventHandler(this.rdbBookCase_CheckedChanged);
             // 
             // btnClear
             // 
@@ -283,6 +294,7 @@
             this.rdbSingleTouch.TabStop = true;
             this.rdbSingleTouch.Text = "SingleTouch";
             this.rdbSingleTouch.UseVisualStyleBackColor = true;
+            this.rdbSingleTouch.CheckedChanged += new System.EventHandler(this.rdbSingleTouch_CheckedChanged);
             // 
             // rdbMultiTouch
             // 
@@ -295,6 +307,7 @@
             this.rdbMultiTouch.TabStop = true;
             this.rdbMultiTouch.Text = "MultiTouch";
             this.rdbMultiTouch.UseVisualStyleBackColor = true;
+            this.rdbMultiTouch.CheckedChanged += new System.EventHandler(this.rdbMultiTouch_CheckedChanged);
             // 
             // Form1
             // 
@@ -309,8 +322,11 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnApply);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Mobile Phone";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -23,22 +23,42 @@ namespace MobileConsoleApp
             Console.WriteLine("2 - Samsung Headset");
             Console.WriteLine("3 - Phone Speaker");
             Console.WriteLine("4 - Unofficial Phone Headset");
-            string headsetNo = Convert.ToString(Console.ReadLine());
+            PLAYBACK:  string headsetNo = Convert.ToString(Console.ReadLine());
+            if (headsetNo != "4" && headsetNo != "1" && headsetNo != "2" && headsetNo != "3")
+            {
+                Console.WriteLine("Please, enter a valid number!");
+                goto PLAYBACK;
+            }
             Console.WriteLine("Select charger for phone:");
             Console.WriteLine("1 - Powerbank");
             Console.WriteLine("2 - Charger");
-            string chargerNo = Convert.ToString(Console.ReadLine());
+            CHARGENO:  string chargerNo = Convert.ToString(Console.ReadLine());
+            if (chargerNo != "1" && chargerNo != "2")
+            {
+                Console.WriteLine("Please, enter a valid number!");
+                goto CHARGENO;
+            }
             Console.WriteLine("Select case for mobile:");
             Console.WriteLine("1 - Bookcase");
             Console.WriteLine("2 - ToughCase");
             Console.WriteLine("3 - SlimCase");
             Console.WriteLine("4 - FolioCase");
             Console.WriteLine("5 - WalletCase");
-            string caseNo = Convert.ToString(Console.ReadLine());
+            CASENO: string caseNo = Convert.ToString(Console.ReadLine());
+            if (caseNo != "1" && caseNo != "2" && caseNo != "3" && caseNo != "4" && caseNo != "5")
+            {
+                Console.WriteLine("Please, enter a valid number!");
+                goto CASENO;
+            }
             Console.WriteLine("Select Screen Touch type of mobile:");
             Console.WriteLine("1 - Multi-touch");
             Console.WriteLine("2 - Single-touch");
-            string screenTouchNo = Convert.ToString(Console.ReadLine());
+            SCREENNO: string screenTouchNo = Convert.ToString(Console.ReadLine());
+            if (screenTouchNo != "1" && screenTouchNo != "2")
+            {
+                Console.WriteLine("Please, enter a valid number!");
+                goto SCREENNO;
+            }
 
             switch (headsetNo)
             {
@@ -70,6 +90,9 @@ namespace MobileConsoleApp
                         "\nPlay sound in mobile:\n");
                     mobilePhone.Play(mobilePhone);
                     break;
+                default:
+                    Console.WriteLine("Please, enter number from 1 to 4");
+                    break;
             }
             Console.WriteLine("\n");
             switch (chargerNo)
@@ -83,6 +106,9 @@ namespace MobileConsoleApp
                     mobilePhone.icharger = new Charger(new OutPut());
                     mobilePhone.WriteOn("\nTypical Charger selected for charging\nSet charger to Mobile...\nCharge your mobile:\n");
                     mobilePhone.Charge();
+                    break;
+                default:
+                    Console.WriteLine("Please, enter number from 1 to 2");
                     break;
             }
             Console.WriteLine("\n");
@@ -113,6 +139,9 @@ namespace MobileConsoleApp
                     mobilePhone.WriteOn("WalletCase selected for mobile:\n");
                     mobilePhone.SelectCase();
                     break;
+                default:
+                    Console.WriteLine("Please, enter number from 1 to 5");
+                    break;
             }
             Console.WriteLine("\n");
             switch (screenTouchNo)
@@ -126,6 +155,9 @@ namespace MobileConsoleApp
                     mobilePhone.iscreentouch = new SingleTouch(new OutPut());
                     mobilePhone.WriteOn("SingleTouch selected for charging:\n");
                     mobilePhone.SelectScreenTouch();
+                    break;
+                default:
+                    Console.WriteLine("Please, enter number from 1 to 2");
                     break;
             }
             Console.ReadKey();
