@@ -50,6 +50,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MessagesTest.cs" />
     <Compile Include="ScreenTouchTests.cs" />
     <Compile Include="ChargerTests.cs" />
     <Compile Include="FakeRepository.cs" />
@@ -61,6 +62,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MessagesWinFormApp\MessagesWinFormApp.csproj">
+      <Project>{bd8a5506-d5ba-479d-8689-68be2c9bae67}</Project>
+      <Name>MessagesWinFormApp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MobilePhone\Mobile.csproj">
       <Project>{18312240-7310-4134-87b5-872ef322e858}</Project>
       <Name>Mobile</Name>

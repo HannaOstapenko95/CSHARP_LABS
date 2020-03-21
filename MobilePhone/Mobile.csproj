@@ -61,6 +61,8 @@
     <Compile Include="CommonObjects\Battery.cs" />
     <Compile Include="Charger\ICharger.cs" />
     <Compile Include="CommonObjects\Screen\IScreenTouch.cs" />
+    <Compile Include="MobilePhone\SMSProvider.cs" />
+    <Compile Include="MobilePhone\WorkPerformedEventArgs.cs" />
     <Compile Include="Output\OutPut.cs" />
     <Compile Include="Output\IOutput.cs" />
     <Compile Include="Playback\iPhoneHeadset.cs" />

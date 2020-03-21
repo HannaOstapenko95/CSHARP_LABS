@@ -2,6 +2,7 @@
 using Mobile.CommonObjects;
 using Mobile.CommonObjects.Camera;
 using Mobile.CommonObjects.Screen;
+using Mobile.MobilePhone;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -60,6 +61,7 @@ namespace Mobile
         public abstract ICharger icharger { get; set; }
         public abstract ICase icase { get; set; }
         public abstract IScreenTouch iscreentouch { get; set; }
+        //public SMSProvider SMSProvider { get; set; }
         public virtual void Play(object data = null, StringBuilder textboxBuilder = null, RichTextBox textBox = null)
         {
             if (data == null || textboxBuilder == null || textBox == null)

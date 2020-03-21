@@ -17,3 +17,6 @@ C:\MobilePhone\MobileTest\obj\Debug\MobileTest.csprojAssemblyReference.cache
 C:\MobilePhone\MobileTest\obj\Debug\MobileTest.csproj.CopyComplete
 C:\MobilePhone\MobileTest\obj\Debug\MobileTest.dll
 C:\MobilePhone\MobileTest\obj\Debug\MobileTest.pdb
+C:\MobilePhone\MobileTest\bin\Debug\MessagesWinFormApp.exe
+C:\MobilePhone\MobileTest\bin\Debug\MessagesWinFormApp.pdb
+C:\MobilePhone\MobileTest\bin\Debug\MessagesWinFormApp.exe.config

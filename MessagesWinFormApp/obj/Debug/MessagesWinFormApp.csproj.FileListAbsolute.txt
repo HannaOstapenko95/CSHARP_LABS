@@ -1,0 +1,16 @@
+C:\MobilePhone\MessagesWinFormApp\bin\Debug\MessagesWinFormApp.exe.config
+C:\MobilePhone\MessagesWinFormApp\bin\Debug\MessagesWinFormApp.exe
+C:\MobilePhone\MessagesWinFormApp\bin\Debug\MessagesWinFormApp.pdb
+C:\MobilePhone\MessagesWinFormApp\bin\Debug\Mobile.dll
+C:\MobilePhone\MessagesWinFormApp\bin\Debug\MobileConsoleApp.exe
+C:\MobilePhone\MessagesWinFormApp\bin\Debug\MobileConsoleApp.pdb
+C:\MobilePhone\MessagesWinFormApp\bin\Debug\MobileConsoleApp.exe.config
+C:\MobilePhone\MessagesWinFormApp\bin\Debug\Mobile.pdb
+C:\MobilePhone\MessagesWinFormApp\bin\Debug\Mobile.dll.config
+C:\MobilePhone\MessagesWinFormApp\obj\Debug\MessagesWinFormApp.csprojAssemblyReference.cache
+C:\MobilePhone\MessagesWinFormApp\obj\Debug\MessagesWinFormApp.Properties.Resources.resources
+C:\MobilePhone\MessagesWinFormApp\obj\Debug\MessagesWinFormApp.csproj.GenerateResource.cache
+C:\MobilePhone\MessagesWinFormApp\obj\Debug\MessagesWinFormApp.csproj.CopyComplete
+C:\MobilePhone\MessagesWinFormApp\obj\Debug\MessagesWinFormApp.exe
+C:\MobilePhone\MessagesWinFormApp\obj\Debug\MessagesWinFormApp.pdb
+C:\MobilePhone\MessagesWinFormApp\obj\Debug\MessagesWinFormApp.Form1.resources

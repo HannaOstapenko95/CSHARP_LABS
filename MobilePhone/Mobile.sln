@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileWinFormApp", "..\Mobi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTest", "..\MobileTest\MobileTest.csproj", "{47B63CAD-0825-4A21-BA50-F6D4C39F5912}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagesWinFormApp", "..\MessagesWinFormApp\MessagesWinFormApp.csproj", "{BD8A5506-D5BA-479D-8689-68BE2C9BAE67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{47B63CAD-0825-4A21-BA50-F6D4C39F5912}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47B63CAD-0825-4A21-BA50-F6D4C39F5912}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47B63CAD-0825-4A21-BA50-F6D4C39F5912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD8A5506-D5BA-479D-8689-68BE2C9BAE67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD8A5506-D5BA-479D-8689-68BE2C9BAE67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD8A5506-D5BA-479D-8689-68BE2C9BAE67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD8A5506-D5BA-479D-8689-68BE2C9BAE67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
