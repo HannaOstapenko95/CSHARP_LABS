@@ -5,6 +5,7 @@ public class SMSProvider
 {
     public delegate string SMSReceivedDelegate(string message);
     public delegate string FormatDelegate(string text);
+    public delegate string FormatDelegateDate(string text, DateTime dateTime);
 
     public event SMSReceivedDelegate SMSReceived;
     public void DoWork(string i)
@@ -13,9 +14,10 @@ public class SMSProvider
         {
             System.Threading.Thread.Sleep(250);
             RaiseSMSReceivedEvent(i);
-
         }
+        
     }
+
 
     //Event for SMSReceivedDelegate
     public bool RaiseSMSReceivedEvent(string message)
@@ -37,6 +39,7 @@ public class SMSProvider
     }
     public static string EndWithTime(string message)
     {
+
         return $"{message} [{DateTime.Now}] \n";
     }
     public static string UpperCase(string message)

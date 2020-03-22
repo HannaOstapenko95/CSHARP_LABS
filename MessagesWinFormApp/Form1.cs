@@ -9,26 +9,21 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using static Mobile.MobilePhone.SMSProvider;
 using static SMSProvider;
 
 namespace MessagesWinFormApp
 {
     
-    public partial class Form1 : Form
+    public partial class frmMessageFormatting : Form
     {
         public readonly FormatDelegate Formatter = new FormatDelegate(FormatWithTime);
         public readonly FormatDelegate Formatter_EndWithTime = new FormatDelegate(EndWithTime);
         public readonly FormatDelegate Formatter_Up = new FormatDelegate(UpperCase);
         public readonly FormatDelegate Formatter_Lower = new FormatDelegate(LowerCase);
 
-        public Form1()
+        public frmMessageFormatting()
         {
             InitializeComponent();
-        }
-        private void rtbMessages_TextChanged(object sender, EventArgs e)
-        {
-            
         }
         public string OnSMSReceived(string message)
         {
@@ -71,6 +66,7 @@ namespace MessagesWinFormApp
                 return message;
             }
             string formattedMessage = Formatter_Lower($"{message}");
+            
             rtbMessages.AppendText(formattedMessage);
             return formattedMessage;
         }
@@ -86,32 +82,34 @@ namespace MessagesWinFormApp
 
         private void rtbMessages_TextChanged_1(object sender, EventArgs e)
         {
+            rtbMessages.Update();
         }
 
         private void comboBox1_SelectionChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 0)
+            if (cmbSelectFormat.SelectedIndex == 0)
             {
                 rtbMessages.Clear();
                 SMSProvider sms = new SMSProvider();
                 sms.SMSReceived += (message) => OnSMSReceived(message);
                 sms.DoWork("Message received");
+                
             }
-            if (comboBox1.SelectedIndex == 1)
+            if (cmbSelectFormat.SelectedIndex == 1)
             {
                 rtbMessages.Clear();
                 SMSProvider sms = new SMSProvider();
                 sms.SMSReceived += (message) => OnUpperCase(message);
                 sms.DoWork("Message received");
             }
-            if (comboBox1.SelectedIndex == 2)
+            if (cmbSelectFormat.SelectedIndex == 2)
             {
                 rtbMessages.Clear();
                 SMSProvider sms = new SMSProvider();
                 sms.SMSReceived += (message) => OnLowerCase(message);
                 sms.DoWork("Message received");
             }
-            if (comboBox1.SelectedIndex == 3)
+            if (cmbSelectFormat.SelectedIndex == 3)
             {
                 rtbMessages.Clear();
                 SMSProvider sms = new SMSProvider();

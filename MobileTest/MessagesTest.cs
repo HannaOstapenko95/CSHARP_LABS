@@ -17,7 +17,7 @@ namespace MobileTest
         {
             //Arrange
             SMSProvider sms = new SMSProvider();
-            Form1 form = new Form1();
+            frmMessageFormatting form = new frmMessageFormatting();
             var expected = $"[{DateTime.Now}] {"Message received\r\n"}";
 
             //Act
@@ -31,7 +31,7 @@ namespace MobileTest
         {
             //Arrange
             SMSProvider sms = new SMSProvider();
-            Form1 form = new Form1();
+            frmMessageFormatting form = new frmMessageFormatting();
             var expected = $"[{DateTime.Now}] {"MESSAGE RECEIVED \n"}";
 
             //Act
@@ -45,7 +45,7 @@ namespace MobileTest
         {
             //Arrange
             SMSProvider sms = new SMSProvider();
-            Form1 form = new Form1();
+            frmMessageFormatting form = new frmMessageFormatting();
             var expected = $"[{DateTime.Now}] {"message received \n"}";
 
             //Act
@@ -59,21 +59,24 @@ namespace MobileTest
         {
             //Arrange
             SMSProvider sms = new SMSProvider();
-            Form1 form = new Form1();
-            var expected = $"{"Message received"} [{DateTime.Now}] \n";
+            frmMessageFormatting form = new frmMessageFormatting();
+            DateTime dateConstant = new DateTime(2010, 1, 1, 4, 0, 15);
+            var expected = $"{"Message received"} {dateConstant}";
 
             //Act
-            var actual = form.OnSMSDateEnd("Message received");
+            string actual = form.OnSMSDateEnd("Message received");
+            //Replace date received from OnSMSDateEnd on constant date 
+            string actualWithReplacedDate = actual.Replace(actual.Substring(17), dateConstant.ToString());
 
             //Assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actualWithReplacedDate);
         }
         [TestMethod]
         public void Check_EventRaised_When_message_generated()
         {
             //Arrange
             SMSProvider sms = new SMSProvider();
-            Form1 form = new Form1();
+            frmMessageFormatting form = new frmMessageFormatting();
             string smsMessage = "Message received";
             sms.SMSReceived += (message) => form.OnSMSReceived(message);
 

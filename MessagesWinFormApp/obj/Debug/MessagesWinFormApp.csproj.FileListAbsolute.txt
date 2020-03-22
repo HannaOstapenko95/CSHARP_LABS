@@ -13,4 +13,4 @@ C:\MobilePhone\MessagesWinFormApp\obj\Debug\MessagesWinFormApp.csproj.GenerateRe
 C:\MobilePhone\MessagesWinFormApp\obj\Debug\MessagesWinFormApp.csproj.CopyComplete
 C:\MobilePhone\MessagesWinFormApp\obj\Debug\MessagesWinFormApp.exe
 C:\MobilePhone\MessagesWinFormApp\obj\Debug\MessagesWinFormApp.pdb
-C:\MobilePhone\MessagesWinFormApp\obj\Debug\MessagesWinFormApp.Form1.resources
+C:\MobilePhone\MessagesWinFormApp\obj\Debug\MessagesWinFormApp.frmMessageFormatting.resources
