@@ -61,7 +61,7 @@ namespace Mobile
         public abstract ICharger icharger { get; set; }
         public abstract ICase icase { get; set; }
         public abstract IScreenTouch iscreentouch { get; set; }
-        //public SMSProvider SMSProvider { get; set; }
+        public SMSProvider SMSProvider { get; set; }
         public virtual void Play(object data = null, StringBuilder textboxBuilder = null, RichTextBox textBox = null)
         {
             if (data == null || textboxBuilder == null || textBox == null)
@@ -113,6 +113,7 @@ namespace Mobile
                 iscreentouch.SelectScreenTouch(data, textboxBuilder, textBox);
             }
         }
+        public abstract Storage Storage { get; set; }
         public abstract MobileTypeConcrete MobileTypes { get; set; }
         public abstract OperatingSystems OperatingSystemType { get; set; }
         public abstract ScreenBase Screen { get; }

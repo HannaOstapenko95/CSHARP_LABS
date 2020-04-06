@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileWinFormApp", "MobileWinFormApp.csproj", "{5E32494C-2645-4E8D-89BC-B5D226AC3B90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagesWinFormApp", "..\MessagesWinFormApp\MessagesWinFormApp.csproj", "{BD8A5506-D5BA-479D-8689-68BE2C9BAE67}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mobile.Test", "..\Mobile.Test\Mobile.Test.csproj", "{D22885F8-8D8A-4CB7-A77F-4434E103E34D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileConsoleApp", "..\MobileConsoleApp\MobileConsoleApp.csproj", "{806265E5-4BE2-4FE2-80EA-19643AECE103}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobile", "..\MobilePhone\Mobile.csproj", "{18312240-7310-4134-87B5-872EF322E858}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTest", "..\MobileTest\MobileTest.csproj", "{47B63CAD-0825-4A21-BA50-F6D4C39F5912}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E32494C-2645-4E8D-89BC-B5D226AC3B90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E32494C-2645-4E8D-89BC-B5D226AC3B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E32494C-2645-4E8D-89BC-B5D226AC3B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E32494C-2645-4E8D-89BC-B5D226AC3B90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD8A5506-D5BA-479D-8689-68BE2C9BAE67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD8A5506-D5BA-479D-8689-68BE2C9BAE67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD8A5506-D5BA-479D-8689-68BE2C9BAE67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD8A5506-D5BA-479D-8689-68BE2C9BAE67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D22885F8-8D8A-4CB7-A77F-4434E103E34D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D22885F8-8D8A-4CB7-A77F-4434E103E34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D22885F8-8D8A-4CB7-A77F-4434E103E34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D22885F8-8D8A-4CB7-A77F-4434E103E34D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{806265E5-4BE2-4FE2-80EA-19643AECE103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{806265E5-4BE2-4FE2-80EA-19643AECE103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{806265E5-4BE2-4FE2-80EA-19643AECE103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{806265E5-4BE2-4FE2-80EA-19643AECE103}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18312240-7310-4134-87B5-872EF322E858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18312240-7310-4134-87B5-872EF322E858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18312240-7310-4134-87B5-872EF322E858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18312240-7310-4134-87B5-872EF322E858}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47B63CAD-0825-4A21-BA50-F6D4C39F5912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47B63CAD-0825-4A21-BA50-F6D4C39F5912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47B63CAD-0825-4A21-BA50-F6D4C39F5912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47B63CAD-0825-4A21-BA50-F6D4C39F5912}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFCDC353-4CFB-47CB-BAE9-08722BFB7669}
+	EndGlobalSection
+EndGlobal

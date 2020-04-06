@@ -2,6 +2,7 @@
 using Mobile.CommonObjects;
 using Mobile.CommonObjects.Camera;
 using Mobile.CommonObjects.Screen;
+using Mobile.MobilePhone;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,8 @@ namespace Mobile
         public override ICharger icharger { get; set; }
         public override ICase icase { get; set; }
         public override IScreenTouch iscreentouch { get; set; }
-
+        public override Storage Storage { get; set; }
+        public SMSProvider SMSProvider { get; set; }
         public override MobileTypeConcrete MobileTypes { get { return vMobileTypes; } set { value = vMobileTypes; } }
 
         private MobileTypeConcrete vMobileTypes = MobileTypeConcrete.Smartphone;

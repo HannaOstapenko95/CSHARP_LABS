@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using MessagesWinFormApp;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Mobile;
 using Mobile.Case;
 using Mobile.Charger;
+using Mobile.MobilePhone;
 using Mobile.Test;
 using static SMSProvider;
 
@@ -87,5 +90,7 @@ namespace MobileTest
             //Assert
             Assert.IsTrue(actual);
         }
+
+       
     }
 }

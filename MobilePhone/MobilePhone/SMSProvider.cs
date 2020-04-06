@@ -1,13 +1,16 @@
 ﻿
+using Mobile.MobilePhone;
 using System;
+using System.Collections.Generic;
 
-public class SMSProvider
+public class SMSProvider : Storage
 {
     public delegate string SMSReceivedDelegate(string message);
     public delegate string FormatDelegate(string text);
     public delegate string FormatDelegateDate(string text, DateTime dateTime);
 
     public event SMSReceivedDelegate SMSReceived;
+    
     public void DoWork(string i)
     {
         for (int n = 0; n < 10; n++)
@@ -15,12 +18,11 @@ public class SMSProvider
             System.Threading.Thread.Sleep(250);
             RaiseSMSReceivedEvent(i);
         }
-        
     }
 
 
-    //Event for SMSReceivedDelegate
-    public bool RaiseSMSReceivedEvent(string message)
+//Event for SMSReceivedDelegate
+public bool RaiseSMSReceivedEvent(string message)
     {
         var handler = SMSReceived;
         if (handler != null)
