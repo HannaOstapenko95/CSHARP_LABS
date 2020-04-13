@@ -50,6 +50,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BatteryTests.cs" />
     <Compile Include="MessagesFilterTests.cs" />
     <Compile Include="MessagesTest.cs" />
     <Compile Include="ScreenTouchTests.cs" />

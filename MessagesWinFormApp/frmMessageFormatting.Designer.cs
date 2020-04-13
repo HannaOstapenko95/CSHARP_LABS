@@ -45,13 +45,20 @@
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.prbCharge = new System.Windows.Forms.ProgressBar();
+            this.btnCharge = new System.Windows.Forms.Button();
+            this.btnStopCharge = new System.Windows.Forms.Button();
+            this.lblProgress = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // rtbMessages
             // 
             this.rtbMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rtbMessages.Location = new System.Drawing.Point(854, 112);
+            this.rtbMessages.Location = new System.Drawing.Point(854, 216);
             this.rtbMessages.Name = "rtbMessages";
             this.rtbMessages.Size = new System.Drawing.Size(468, 405);
             this.rtbMessages.TabIndex = 0;
@@ -68,17 +75,18 @@
             "UpperCase",
             "LowerCase",
             "End with DateTime"});
-            this.cmbSelectFormat.Location = new System.Drawing.Point(854, 64);
+            this.cmbSelectFormat.Location = new System.Drawing.Point(854, 151);
             this.cmbSelectFormat.Name = "cmbSelectFormat";
             this.cmbSelectFormat.Size = new System.Drawing.Size(233, 32);
             this.cmbSelectFormat.TabIndex = 2;
+            this.cmbSelectFormat.SelectedIndexChanged += new System.EventHandler(this.cmbSelectFormat_SelectedIndexChanged);
             this.cmbSelectFormat.SelectedValueChanged += new System.EventHandler(this.cmbSelectFormat_SelectionChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(849, 21);
+            this.label1.Location = new System.Drawing.Point(849, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(359, 25);
             this.label1.TabIndex = 3;
@@ -188,7 +196,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(12, 216);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(527, 78);
+            this.groupBox1.Size = new System.Drawing.Size(395, 78);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select filtering logic for conditions:";
@@ -214,7 +222,8 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAdd.Location = new System.Drawing.Point(571, 303);
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnAdd.Location = new System.Drawing.Point(413, 212);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(216, 34);
             this.btnAdd.TabIndex = 16;
@@ -225,7 +234,7 @@
             // btnRemove
             // 
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnRemove.Location = new System.Drawing.Point(571, 353);
+            this.btnRemove.Location = new System.Drawing.Point(413, 252);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(216, 34);
             this.btnRemove.TabIndex = 17;
@@ -233,12 +242,90 @@
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
+            // btnStart
+            // 
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnStart.Location = new System.Drawing.Point(658, 303);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(179, 47);
+            this.btnStart.TabIndex = 18;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // btnStop
+            // 
+            this.btnStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnStop.Location = new System.Drawing.Point(658, 356);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(177, 46);
+            this.btnStop.TabIndex = 19;
+            this.btnStop.Text = "Stop";
+            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnClear.Location = new System.Drawing.Point(658, 408);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(177, 44);
+            this.btnClear.TabIndex = 20;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // prbCharge
+            // 
+            this.prbCharge.Location = new System.Drawing.Point(854, 49);
+            this.prbCharge.Name = "prbCharge";
+            this.prbCharge.Size = new System.Drawing.Size(471, 38);
+            this.prbCharge.TabIndex = 21;
+            // 
+            // btnCharge
+            // 
+            this.btnCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnCharge.Location = new System.Drawing.Point(677, 49);
+            this.btnCharge.Name = "btnCharge";
+            this.btnCharge.Size = new System.Drawing.Size(158, 59);
+            this.btnCharge.TabIndex = 22;
+            this.btnCharge.Text = "Charge";
+            this.btnCharge.UseVisualStyleBackColor = true;
+            this.btnCharge.Click += new System.EventHandler(this.btnCharge_Click);
+            // 
+            // btnStopCharge
+            // 
+            this.btnStopCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnStopCharge.Location = new System.Drawing.Point(677, 111);
+            this.btnStopCharge.Name = "btnStopCharge";
+            this.btnStopCharge.Size = new System.Drawing.Size(158, 61);
+            this.btnStopCharge.TabIndex = 24;
+            this.btnStopCharge.Text = "Stop Charging";
+            this.btnStopCharge.UseVisualStyleBackColor = true;
+            this.btnStopCharge.Click += new System.EventHandler(this.btnStopCharge_Click);
+            // 
+            // lblProgress
+            // 
+            this.lblProgress.AutoSize = true;
+            this.lblProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblProgress.Location = new System.Drawing.Point(1060, 28);
+            this.lblProgress.Name = "lblProgress";
+            this.lblProgress.Size = new System.Drawing.Size(0, 18);
+            this.lblProgress.TabIndex = 25;
+            // 
             // frmMessageFormatting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1334, 633);
+            this.Controls.Add(this.lblProgress);
+            this.Controls.Add(this.btnStopCharge);
+            this.Controls.Add(this.btnCharge);
+            this.Controls.Add(this.prbCharge);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnStop);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dtpFrom);
@@ -256,6 +343,7 @@
             this.MaximizeBox = false;
             this.Name = "frmMessageFormatting";
             this.Text = "Message Formatting";
+            this.Load += new System.EventHandler(this.frmMessageFormatting_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -282,6 +370,13 @@
         private System.Windows.Forms.DateTimePicker dtpFrom;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.Button btnClear;
+        public System.Windows.Forms.ProgressBar prbCharge;
+        private System.Windows.Forms.Button btnCharge;
+        public System.Windows.Forms.Button btnStopCharge;
+        public System.Windows.Forms.Label lblProgress;
     }
 }
 

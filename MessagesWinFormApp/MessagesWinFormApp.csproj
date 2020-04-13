@@ -44,8 +44,13 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChargeFactory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChargeType.cs" />
     <Compile Include="frmMessageFormatting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +59,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaskFactory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThreadFactory.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="frmMessageFormatting.resx">
       <DependentUpon>frmMessageFormatting.cs</DependentUpon>
     </EmbeddedResource>

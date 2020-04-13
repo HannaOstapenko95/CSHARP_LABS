@@ -15,6 +15,11 @@ namespace Mobile
             this.Size = size;
             this.Volume = volume;
         }
+        public int Charge { get; set; }
+        public Battery()
+        {
+        }
+
         public override string ToString()
         {
             return "Battery -> " + "Size: " + Size + "  Volume: " + Volume + "mAh";
