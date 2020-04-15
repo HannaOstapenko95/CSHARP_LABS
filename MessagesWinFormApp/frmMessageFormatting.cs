@@ -436,7 +436,7 @@ namespace MessagesWinFormApp
             return t;
         }
         CancellationTokenSource cancelTokenSrc;
-        CancellationToken token2;
+        public CancellationToken token2;
         public delegate int UpdateProgressBarDelegate(int i);
         public event UpdateProgressBarDelegate UpdProgressBar;
         public async Task<int> ChargeAsync(CancellationToken token2)
@@ -452,9 +452,10 @@ namespace MessagesWinFormApp
             }
             return battery.Charge;
         }
+
         private async void btnCharge_Click(object sender, EventArgs e)
         {
-            string message = "Which class do you want to use? \n Yes - with Threads; \n No - with Tasks.";
+            string message = "Do you want to charge battery with Threads? \n\n(press 'No' to use Tasks)";
             string title = "Choose method of charging";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show(message, title, buttons);
@@ -497,7 +498,7 @@ namespace MessagesWinFormApp
                 }
                 //**************************
             }
-            else //Using Tasks
+            else  //Using Tasks
             {
                 //**************************
                 //Variant 1 - works
