@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BatteryTests.cs" />
+    <Compile Include="ComparableTest.cs" />
     <Compile Include="MessagesFilterTests.cs" />
     <Compile Include="MessagesTest.cs" />
     <Compile Include="ScreenTouchTests.cs" />

@@ -47,6 +47,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CallsForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallsForm1.Designer.cs">
+      <DependentUpon>CallsForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChargeFactory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     <Compile Include="ThreadFactory.cs">
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="CallsForm1.resx">
+      <DependentUpon>CallsForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMessageFormatting.resx">
       <DependentUpon>frmMessageFormatting.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +107,10 @@
     <ProjectReference Include="..\MobilePhone\Mobile.csproj">
       <Project>{18312240-7310-4134-87b5-872ef322e858}</Project>
       <Name>Mobile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MobileWinFormApp\MobileWinFormApp.csproj">
+      <Project>{5E32494C-2645-4E8D-89BC-B5D226AC3B90}</Project>
+      <Name>MobileWinFormApp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

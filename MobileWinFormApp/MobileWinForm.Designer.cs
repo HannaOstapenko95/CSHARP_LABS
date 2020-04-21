@@ -309,7 +309,7 @@
             this.rdbMultiTouch.UseVisualStyleBackColor = true;
             this.rdbMultiTouch.CheckedChanged += new System.EventHandler(this.rdbMultiTouch_CheckedChanged);
             // 
-            // Form1
+            // MobileWinForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -324,7 +324,8 @@
             this.Controls.Add(this.btnApply);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "MobileWinForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mobile Phone";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);

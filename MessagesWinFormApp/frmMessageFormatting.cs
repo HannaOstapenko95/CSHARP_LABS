@@ -1,5 +1,6 @@
 ﻿using Mobile;
 using Mobile.MobilePhone;
+using MobileWinFormApp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,7 +33,6 @@ namespace MessagesWinFormApp
             InitializeComboBoxWithUsers();
             FormatListView();
             ShowMessages(Storage.GenerateMessagesList());
-
         }
         
         private void FormatListView()
@@ -652,7 +652,28 @@ namespace MessagesWinFormApp
                 lblProgress.Text = $"{i} %";
             }
         }
-        
+
+        private void btnCalls_Click(object sender, EventArgs e)
+        {
+            frmCalls frmCall = new frmCalls();
+            frmCall.Show();
+        }
+
+        private void btnMobilePhones_Click(object sender, EventArgs e)
+        {
+            MobileWinForm mbf = new MobileWinForm();
+            mbf.Show();
+        }
+
+        private void lstView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
    

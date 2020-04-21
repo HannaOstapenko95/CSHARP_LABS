@@ -20,3 +20,6 @@ C:\MobilePhone\MobileTest\obj\Debug\MobileTest.pdb
 C:\MobilePhone\MobileTest\bin\Debug\MessagesWinFormApp.exe
 C:\MobilePhone\MobileTest\bin\Debug\MessagesWinFormApp.pdb
 C:\MobilePhone\MobileTest\bin\Debug\MessagesWinFormApp.exe.config
+C:\MobilePhone\MobileTest\bin\Debug\MobileWinFormApp.exe
+C:\MobilePhone\MobileTest\bin\Debug\MobileWinFormApp.pdb
+C:\MobilePhone\MobileTest\bin\Debug\MobileWinFormApp.exe.config

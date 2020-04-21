@@ -52,15 +52,17 @@
             this.btnCharge = new System.Windows.Forms.Button();
             this.btnStopCharge = new System.Windows.Forms.Button();
             this.lblProgress = new System.Windows.Forms.Label();
+            this.btnCalls = new System.Windows.Forms.Button();
+            this.btnMobilePhones = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // rtbMessages
             // 
             this.rtbMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rtbMessages.Location = new System.Drawing.Point(854, 216);
+            this.rtbMessages.Location = new System.Drawing.Point(607, 216);
             this.rtbMessages.Name = "rtbMessages";
-            this.rtbMessages.Size = new System.Drawing.Size(468, 405);
+            this.rtbMessages.Size = new System.Drawing.Size(545, 405);
             this.rtbMessages.TabIndex = 0;
             this.rtbMessages.Text = "";
             this.rtbMessages.TextChanged += new System.EventHandler(this.rtbMessages_TextChanged_1);
@@ -75,7 +77,7 @@
             "UpperCase",
             "LowerCase",
             "End with DateTime"});
-            this.cmbSelectFormat.Location = new System.Drawing.Point(854, 151);
+            this.cmbSelectFormat.Location = new System.Drawing.Point(794, 106);
             this.cmbSelectFormat.Name = "cmbSelectFormat";
             this.cmbSelectFormat.Size = new System.Drawing.Size(233, 32);
             this.cmbSelectFormat.TabIndex = 2;
@@ -86,11 +88,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(849, 102);
+            this.label1.Location = new System.Drawing.Point(789, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(359, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Format for generating messages:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lstView
             // 
@@ -105,6 +108,7 @@
             this.lstView.TileSize = new System.Drawing.Size(50, 44);
             this.lstView.UseCompatibleStateImageBehavior = false;
             this.lstView.View = System.Windows.Forms.View.Tile;
+            this.lstView.SelectedIndexChanged += new System.EventHandler(this.lstView_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -190,7 +194,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.rdbAnd);
             this.groupBox1.Controls.Add(this.rdbOr);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -203,7 +206,8 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(250, 36);
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSearch.Location = new System.Drawing.Point(420, 253);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(136, 41);
             this.btnSearch.TabIndex = 13;
@@ -223,9 +227,9 @@
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnAdd.Location = new System.Drawing.Point(413, 212);
+            this.btnAdd.Location = new System.Drawing.Point(12, 635);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(216, 34);
+            this.btnAdd.Size = new System.Drawing.Size(251, 39);
             this.btnAdd.TabIndex = 16;
             this.btnAdd.Text = "Add message";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -234,9 +238,9 @@
             // btnRemove
             // 
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnRemove.Location = new System.Drawing.Point(413, 252);
+            this.btnRemove.Location = new System.Drawing.Point(269, 635);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(216, 34);
+            this.btnRemove.Size = new System.Drawing.Size(251, 39);
             this.btnRemove.TabIndex = 17;
             this.btnRemove.Text = "Remove message";
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -245,7 +249,7 @@
             // btnStart
             // 
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnStart.Location = new System.Drawing.Point(658, 303);
+            this.btnStart.Location = new System.Drawing.Point(609, 163);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(179, 47);
             this.btnStart.TabIndex = 18;
@@ -256,7 +260,7 @@
             // btnStop
             // 
             this.btnStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnStop.Location = new System.Drawing.Point(658, 356);
+            this.btnStop.Location = new System.Drawing.Point(794, 164);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(177, 46);
             this.btnStop.TabIndex = 19;
@@ -267,7 +271,7 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnClear.Location = new System.Drawing.Point(658, 408);
+            this.btnClear.Location = new System.Drawing.Point(977, 166);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(177, 44);
             this.btnClear.TabIndex = 20;
@@ -277,15 +281,15 @@
             // 
             // prbCharge
             // 
-            this.prbCharge.Location = new System.Drawing.Point(854, 49);
+            this.prbCharge.Location = new System.Drawing.Point(788, 33);
             this.prbCharge.Name = "prbCharge";
-            this.prbCharge.Size = new System.Drawing.Size(471, 38);
+            this.prbCharge.Size = new System.Drawing.Size(360, 38);
             this.prbCharge.TabIndex = 21;
             // 
             // btnCharge
             // 
             this.btnCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnCharge.Location = new System.Drawing.Point(677, 49);
+            this.btnCharge.Location = new System.Drawing.Point(607, 12);
             this.btnCharge.Name = "btnCharge";
             this.btnCharge.Size = new System.Drawing.Size(158, 59);
             this.btnCharge.TabIndex = 22;
@@ -296,7 +300,7 @@
             // btnStopCharge
             // 
             this.btnStopCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnStopCharge.Location = new System.Drawing.Point(677, 111);
+            this.btnStopCharge.Location = new System.Drawing.Point(607, 77);
             this.btnStopCharge.Name = "btnStopCharge";
             this.btnStopCharge.Size = new System.Drawing.Size(158, 61);
             this.btnStopCharge.TabIndex = 24;
@@ -308,17 +312,42 @@
             // 
             this.lblProgress.AutoSize = true;
             this.lblProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblProgress.Location = new System.Drawing.Point(1060, 28);
+            this.lblProgress.Location = new System.Drawing.Point(960, 9);
             this.lblProgress.Name = "lblProgress";
             this.lblProgress.Size = new System.Drawing.Size(0, 18);
             this.lblProgress.TabIndex = 25;
+            // 
+            // btnCalls
+            // 
+            this.btnCalls.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnCalls.Location = new System.Drawing.Point(892, 627);
+            this.btnCalls.Name = "btnCalls";
+            this.btnCalls.Size = new System.Drawing.Size(256, 47);
+            this.btnCalls.TabIndex = 26;
+            this.btnCalls.Text = "Calls";
+            this.btnCalls.UseVisualStyleBackColor = true;
+            this.btnCalls.Click += new System.EventHandler(this.btnCalls_Click);
+            // 
+            // btnMobilePhones
+            // 
+            this.btnMobilePhones.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnMobilePhones.Location = new System.Drawing.Point(609, 627);
+            this.btnMobilePhones.Name = "btnMobilePhones";
+            this.btnMobilePhones.Size = new System.Drawing.Size(277, 47);
+            this.btnMobilePhones.TabIndex = 27;
+            this.btnMobilePhones.Text = "Mobile Phone Properties";
+            this.btnMobilePhones.UseVisualStyleBackColor = true;
+            this.btnMobilePhones.Click += new System.EventHandler(this.btnMobilePhones_Click);
             // 
             // frmMessageFormatting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(1334, 633);
+            this.ClientSize = new System.Drawing.Size(1179, 686);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnMobilePhones);
+            this.Controls.Add(this.btnCalls);
             this.Controls.Add(this.lblProgress);
             this.Controls.Add(this.btnStopCharge);
             this.Controls.Add(this.btnCharge);
@@ -342,6 +371,7 @@
             this.Controls.Add(this.rtbMessages);
             this.MaximizeBox = false;
             this.Name = "frmMessageFormatting";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Message Formatting";
             this.Load += new System.EventHandler(this.frmMessageFormatting_Load);
             this.groupBox1.ResumeLayout(false);
@@ -377,6 +407,8 @@
         private System.Windows.Forms.Button btnCharge;
         public System.Windows.Forms.Button btnStopCharge;
         public System.Windows.Forms.Label lblProgress;
+        private System.Windows.Forms.Button btnCalls;
+        private System.Windows.Forms.Button btnMobilePhones;
     }
 }
 
