@@ -452,7 +452,15 @@ namespace MessagesWinFormApp
             }
             return battery.Charge;
         }
-
+        public int ChargeCheck(Battery battery)
+        {
+            battery.Charge = 0;
+            for (int i = 0; i < 100; i++)
+            {
+                battery.Charge += 1;
+            }
+            return battery.Charge;
+        }
         private async void btnCharge_Click(object sender, EventArgs e)
         {
             string message = "Do you want to charge battery with Threads? \n\n(press 'No' to use Tasks)";
@@ -542,6 +550,8 @@ namespace MessagesWinFormApp
         delegate void SetChargeDelegate();
         public async void ChargeTask()
         {
+            Battery battery = new Battery();
+            int res = battery.Charge;
             for (int i = 0; i <= 100; i++)
             {
                 await Task.Delay(40);
@@ -553,10 +563,10 @@ namespace MessagesWinFormApp
                     }
                     else
                     {
-                        Battery battery = new Battery();
+                        //Battery battery = new Battery();
                         prbCharge.Step = 1;
                         lblProgress.Text = "";
-                        battery.Charge += 1;
+                        res += 1;
                         // lblProgress.Text = $"{i} %";
                         prbCharge.PerformStep();
                     }

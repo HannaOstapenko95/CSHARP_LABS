@@ -104,5 +104,44 @@ namespace MobileTest
             //Assert
             CollectionAssert.AreEqual(expectedResult, actualResult);
         }
+        [TestMethod]
+        public void Compare_Calls_Between_Each_Other()
+        {
+            //Arrange
+            var compare = new Call();
+            List<Call> listCalls = new List<Call>();
+            List<Call> expectedCalls = new List<Call>();
+            int res;
+            List<int> actualResults = new List<int>();
+            List<int> expectedResults = new List<int>() { 1, 0, 0, 0, 1, -1 };
+            List<SimCorpMobile> mobilesList = new List<SimCorpMobile>();
+            listCalls.Add(new Call(new Contact(Users.Hanna, mobilesList), new DateTime(2010, 1, 1, 4, 0, 15), Direction.Incoming));
+            listCalls.Add(new Call(new Contact(Users.Dmytro, mobilesList), new DateTime(2015, 1, 1, 4, 0, 15), Direction.Outgoing));
+            listCalls.Add(new Call(new Contact(Users.Dmytro, mobilesList), new DateTime(2009, 1, 1, 4, 0, 15), Direction.Outgoing));
+            listCalls.Add(new Call(new Contact(Users.Dmytro, mobilesList), new DateTime(2016, 1, 1, 4, 0, 15), Direction.Outgoing));
+            listCalls.Add(new Call(new Contact(Users.Dmytro, mobilesList), new DateTime(2008, 1, 1, 4, 0, 15), Direction.Outgoing));
+            listCalls.Add(new Call(new Contact(Users.Olga, mobilesList), new DateTime(2008, 1, 1, 4, 0, 15), Direction.Outgoing));
+            listCalls.Add(new Call(new Contact(Users.Olga, mobilesList), new DateTime(2008, 1, 1, 4, 0, 15), Direction.Incoming));
+            //Act
+            for (int i = 1; i < listCalls.Count; i++)
+            {
+                res = compare.Compare(listCalls[i], listCalls[i - 1]);
+                if (res == 0)
+                {
+                    actualResults.Add(res);
+                    Console.WriteLine($"Call[{i}] is identical with Call[{i - 1}]. Result = {res}");
+                    Console.WriteLine($"{listCalls[i].Contact.User.ToString()} = {listCalls[i - 1].Contact.User.ToString()}");
+                    Console.WriteLine($"{listCalls[i].CallDirection.ToString()} = {listCalls[i - 1].CallDirection.ToString()}\n");
+                }
+                else
+                {
+                    actualResults.Add(res);
+                    Console.WriteLine($"Call[{i}] is NOT identical with Call[{i - 1}]. Result = {res}");
+                    Console.WriteLine($"{listCalls[i].Contact.User.ToString()}, {listCalls[i].CallDirection.ToString()} != {listCalls[i - 1].Contact.User.ToString()}, {listCalls[i - 1].CallDirection.ToString()}\n");
+                }
+            }
+            //Assert
+            CollectionAssert.AreEqual(expectedResults, actualResults);
+        }
     }
 }

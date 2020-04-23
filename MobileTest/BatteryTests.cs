@@ -13,17 +13,18 @@ namespace MobileTest
     public class BatteryTests
     {
         [TestMethod]
-        public  void Verify_Charge_Between()
+        public  void Verify_Charge_Limit()
         {
             //Arrange
             Battery btr = new Battery();
             frmMessageFormatting f = new frmMessageFormatting();
-            CancellationTokenSource cancelTokenSrc;
             CancellationToken token2;
             //Act
-            var actual =  f.ChargeAsync(token2);
+            //var actual =  f.ChargeAsync(token2);
+            var actual = f.ChargeCheck(btr);
             //Assert
-            Assert.IsTrue(actual.Result > 0 && actual.Result < 100);
+            //Assert.IsTrue(actual > 0 && actual <= 100);
+            Assert.AreEqual(100, actual);
         }
         [TestMethod]
         public void Verify_Battery_Charging_Via_Threads()
@@ -59,13 +60,14 @@ namespace MobileTest
             //Arrange
             Battery btr = new Battery();
             frmMessageFormatting f = new frmMessageFormatting();
-            btr.Charge = 0;
+            //btr.Charge = 0;
             Task actual = new Task(f.ChargeTask);
             //Act
             actual.Start();
             bool expected = btr.Charge > 0;
             //Assert
-            Assert.IsTrue(expected);
+            //Assert.IsTrue(expected);
+            Assert.AreEqual(100, btr.Charge);
         }
         [TestMethod]
         public void Verify_Battery_DisCharging_Via_Tasks()

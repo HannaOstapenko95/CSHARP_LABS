@@ -78,9 +78,9 @@ namespace Mobile.MobilePhone
         public int Compare(Call x, Call y)
         {
             int temp;
-            if ((temp = x.CallTime.CompareTo(y.CallTime)) != 0)
-            { return temp; }
-            else if ((temp = x.CallDirection.CompareTo(y.CallDirection)) != 0)
+            //if ((temp = x.CallTime.CompareTo(y.CallTime)) != 0)
+            //{ return temp; }
+             if ((temp = x.CallDirection.CompareTo(y.CallDirection)) != 0)
             { return temp; }
             else if ((temp = x.Contact.User.CompareTo(y.Contact.User)) != 0)
             {
