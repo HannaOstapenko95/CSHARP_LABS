@@ -116,17 +116,6 @@ namespace MessagesWinFormApp
             System.Threading.Thread.Sleep(200);
             RaiseSMSReceivedEvent(i);
         }
-        //public async Task DoWork(CancellationToken token)
-        //{
-
-        //    for (int n = 0; n < 10; n++)
-        //    {
-        //        token.ThrowIfCancellationRequested();
-        //        await Timer("hel");
-        //        System.Threading.Thread.Sleep(250);
-        //        RaiseSMSReceivedEvent("mes");
-        //    }
-        //}
        
     
         public string OnSMSReceived(string message)
@@ -159,36 +148,6 @@ namespace MessagesWinFormApp
         }
         private void cmbSelectFormat_SelectionChanged(object sender, EventArgs e)
         {
-            if (cmbSelectFormat.SelectedIndex == 0)
-            {
-                //rtbMessages.Clear();
-                //SMSProvider sms = new SMSProvider();
-                //sms.SMSReceived += (message) => OnSMSReceived(message);
-                //Thread myThread = new Thread(new ThreadStart(sms.DoWork));
-                //myThread.Start();
-                //sms.DoWork("Message received");
-            }
-            //if (cmbSelectFormat.SelectedIndex == 1)
-            //{
-            //    rtbMessages.Clear();
-            //    SMSProvider sms = new SMSProvider();
-            //    sms.SMSReceived += (message) => OnUpperCase(message);
-            //    sms.DoWork("Message received");
-            //}
-            //if (cmbSelectFormat.SelectedIndex == 2)
-            //{
-            //    rtbMessages.Clear();
-            //    SMSProvider sms = new SMSProvider();
-            //    sms.SMSReceived += (message) => OnLowerCase(message);
-            //    sms.DoWork("Message received");
-            //}
-            //if (cmbSelectFormat.SelectedIndex == 3)
-            //{
-            //    rtbMessages.Clear();
-            //    SMSProvider sms = new SMSProvider();
-            //    sms.SMSReceived += (message) => OnSMSDateEnd(message);
-            //    sms.DoWork("Message received");   
-            //}  
         }
         public List<Message> OnSMSAdded(List<Message> messages, Users user, string message, DateTime dateTime)
         {
@@ -372,7 +331,9 @@ namespace MessagesWinFormApp
             }
             else
             {
-                MessageBox.Show("Select Format for Messages!");
+                MessageBoxButtons btn = new MessageBoxButtons();
+                var icon = MessageBoxIcon.Error;
+                MessageBox.Show("Select Format for Messages!", "Information", btn, icon);
             }
         }
 
@@ -466,7 +427,8 @@ namespace MessagesWinFormApp
             string message = "Do you want to charge battery with Threads? \n\n(press 'No' to use Tasks)";
             string title = "Choose method of charging";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, title, buttons);
+            var icon = MessageBoxIcon.Information;
+            DialogResult result = MessageBox.Show(message, title, buttons, icon);
             btnCharge.Enabled = false;
             cancelTokenSrc = new CancellationTokenSource();
             token2 = cancelTokenSrc.Token;
@@ -479,7 +441,7 @@ namespace MessagesWinFormApp
                 prbCharge.Value = 1;
                 prbCharge.Step = 1;
 
-                //Variant 1 - does not work
+                //Variant 1 
                 //**************************
                 //If invoke ChargeAsync in separate class (ThreadFactory) - it does not work correctly..
                 //factory = new ThreadFactory();
@@ -493,7 +455,7 @@ namespace MessagesWinFormApp
                 //}
                 //**************************
 
-                //Variant 2 - works
+                //Variant 2 
                 //**************************
                 //If copy the content of ThreadFactory in thic class - works correctly.
                 UpdProgressBar += (i) => OnUpdateProgressBar(i);
@@ -518,7 +480,7 @@ namespace MessagesWinFormApp
                 t2.Wait();
                 //***************************
 
-                //Variant 2 - does not work
+                //Variant 2 
                 //**************************
                 //If invoke ChargeAsync in separate class (TaskFactory) - it does not work correctly..
                 //factory = new TaskFactory();
@@ -563,11 +525,9 @@ namespace MessagesWinFormApp
                     }
                     else
                     {
-                        //Battery battery = new Battery();
                         prbCharge.Step = 1;
                         lblProgress.Text = "";
                         res += 1;
-                        // lblProgress.Text = $"{i} %";
                         prbCharge.PerformStep();
                     }
                 }

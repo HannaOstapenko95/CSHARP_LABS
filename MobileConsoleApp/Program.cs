@@ -14,43 +14,8 @@ namespace MobileConsoleApp
 {
     class Program
     {
-        //static void RaiseSMSReceivedEvent(string message)
-        //{
-        //    Console.WriteLine("Hours worked: " + message);
-        //}
-        //static void RaiseSMSReceivedEvent2(string message)
-        //{
-        //    Console.WriteLine("Hours worked 2: " + message);
-        //}
-        //static void DoWork(SMSReceivedDelegate del)
-        //{
-        //    del("Hello from DoWork");
-        //}
-        //public static void Worker_WorkerPerformed(object sender, WorkPerformedEventArgs e)
-        //{
-        //    Console.WriteLine(e.Message);
-            
-        //}
         static void Main(string[] args)
         {
-            //SMSReceivedDelegate del1 = new SMSReceivedDelegate(RaiseSMSReceivedEvent);
-            //SMSReceivedDelegate del2 = new SMSReceivedDelegate(RaiseSMSReceivedEvent2);
-            
-            ////DoWork(del1);
-            //del1 += del2;
-            //del1("Hello Message");
-
-
-            //var sms = new SMSProvider();
-            //sms.SMSReceived += new EventHandler<WorkPerformedEventArgs>(Worker_WorkerPerformed);
-            ////sms.SMSReceived += new SMSReceivedDelegate(RaiseSMSReceivedEvent);
-            //sms.DoWork("HELLO DOWORK");
-
-
-            //sms.SMSReceived += delegate (object sender, WorkPerformedEventArgs e)
-            //{
-            //    Console.WriteLine("Hours worked: " + e.Hours + " " + e.WorkType);
-            //};
             SimCorpMobile mobilePhone = new SimCorpMobile();
             Console.WriteLine(mobilePhone);
             mobilePhone.ioutput = new OutPut();

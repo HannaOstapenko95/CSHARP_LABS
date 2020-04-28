@@ -67,7 +67,6 @@
     <Compile Include="MobilePhone\MessageComparer.cs" />
     <Compile Include="MobilePhone\SMSProvider.cs" />
     <Compile Include="MobilePhone\Storage.cs" />
-    <Compile Include="MobilePhone\WorkPerformedEventArgs.cs" />
     <Compile Include="Output\OutPut.cs" />
     <Compile Include="Output\IOutput.cs" />
     <Compile Include="Playback\iPhoneHeadset.cs" />
